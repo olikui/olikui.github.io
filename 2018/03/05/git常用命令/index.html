@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Git基本及常用命令 | 小美工带你学习弯道超车的技巧！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="git">
+    <meta name="description" content="git下载git官网下载 初始化初始化参数123$ git config --global user.name &quot;你的名字&quot;$ git config --global user.email &quot;你的邮箱地址&quot;  因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。 注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git基本及常用命令">
+<meta property="og:url" content="http://olikui.github.io/2018/03/05/git常用命令/index.html">
+<meta property="og:site_name" content="小美工带你学习弯道超车的技巧！">
+<meta property="og:description" content="git下载git官网下载 初始化初始化参数123$ git config --global user.name &quot;你的名字&quot;$ git config --global user.email &quot;你的邮箱地址&quot;  因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。 注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-05T10:08:57.153Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git基本及常用命令">
+<meta name="twitter:description" content="git下载git官网下载 初始化初始化参数123$ git config --global user.name &quot;你的名字&quot;$ git config --global user.email &quot;你的邮箱地址&quot;  因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。 注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都">
+    
+        <link rel="alternate" type="application/atom+xml" title="小美工带你学习弯道超车的技巧！" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">olki</h5>
+          <a href="mailto:haoeezi@gmail.com" title="haoeezi@gmail.com" class="mail">haoeezi@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.haoeezi.cn"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                UI作品
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/olikui" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/5484307060/profile?topnav=1&wvr=6" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Git基本及常用命令</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Git基本及常用命令</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-05T03:09:39.000Z" itemprop="datePublished" class="page-time">
+  2018-03-05
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git下载"><span class="post-toc-number">1.</span> <span class="post-toc-text">git下载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#初始化"><span class="post-toc-number">2.</span> <span class="post-toc-text">初始化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初始化参数"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">初始化参数</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#初始化本地仓库"><span class="post-toc-number">3.</span> <span class="post-toc-text">初始化本地仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SSH-key生成"><span class="post-toc-number">4.</span> <span class="post-toc-text">SSH key生成</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#clone代码"><span class="post-toc-number">5.</span> <span class="post-toc-text">clone代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gitignore生效办法"><span class="post-toc-number">6.</span> <span class="post-toc-text">.gitignore生效办法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看各种状态"><span class="post-toc-number">7.</span> <span class="post-toc-text">查看各种状态</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分支"><span class="post-toc-number">8.</span> <span class="post-toc-text">分支</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更新和提交代码"><span class="post-toc-number">9.</span> <span class="post-toc-text">更新和提交代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#撤销"><span class="post-toc-number">10.</span> <span class="post-toc-text">撤销</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git-review"><span class="post-toc-number">11.</span> <span class="post-toc-text">git review</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#规则"><span class="post-toc-number">12.</span> <span class="post-toc-text">规则</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#特殊情况"><span class="post-toc-number">13.</span> <span class="post-toc-text">特殊情况</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#特别提示"><span class="post-toc-number">14.</span> <span class="post-toc-text">特别提示</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-git常用命令"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Git基本及常用命令</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-05 11:09:39" datetime="2018-03-05T03:09:39.000Z"  itemprop="datePublished">2018-03-05</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="git下载"><a href="#git下载" class="headerlink" title="git下载"></a>git下载</h2><p><a href="https://link.jianshu.comt=https://git-scm.com/download/" target="_blank" rel="noopener">git官网下载</a></p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h3 id="初始化参数"><a href="#初始化参数" class="headerlink" title="初始化参数"></a>初始化参数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ git config --global user.name <span class="string">"你的名字"</span></span><br><span class="line">$ git config --global user.email <span class="string">"你的邮箱地址"</span></span><br></pre></td></tr></table></figure>
+<p> 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。<br> 注意<code>git config</code>命令的<code>--global</code>参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</p>
+<h2 id="初始化本地仓库"><a href="#初始化本地仓库" class="headerlink" title="初始化本地仓库"></a>初始化本地仓库</h2> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<h2 id="SSH-key生成"><a href="#SSH-key生成" class="headerlink" title="SSH key生成"></a>SSH key生成</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"你的邮箱地址"</span></span><br></pre></td></tr></table></figure>
+<h2 id="clone代码"><a href="#clone代码" class="headerlink" title="clone代码"></a>clone代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 克隆master分支</span></span><br><span class="line">$ git clone &lt;版本库的网址&gt;</span><br><span class="line"><span class="comment">// 指定克隆的分支名</span></span><br><span class="line">$ git clone -b &lt;分支名&gt; &lt;版本库的网址&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="gitignore生效办法"><a href="#gitignore生效办法" class="headerlink" title=".gitignore生效办法"></a>.gitignore生效办法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先把本地缓存删除（改变成未track状态）</span></span><br><span class="line">$ git rm -r --cached .</span><br><span class="line"><span class="comment">// 然后再提交</span></span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">'update .gitignore'</span></span><br></pre></td></tr></table></figure>
+<h2 id="查看各种状态"><a href="#查看各种状态" class="headerlink" title="查看各种状态"></a>查看各种状态</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看当前状态（分支名，有哪些改动，有哪些冲突，工作区暂存区中的内容，几个commit等等）</span></span><br><span class="line">$ git status</span><br><span class="line"><span class="comment">// 查看本地仓库的提交历史</span></span><br><span class="line">$ git log</span><br><span class="line"><span class="comment">// 查看本地仓库的提交历史，简洁版</span></span><br><span class="line">$ git log --pretty=oneline</span><br><span class="line"><span class="comment">// 查看命令历史</span></span><br><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看分支：</span></span><br><span class="line">$ git branch -a</span><br><span class="line"><span class="comment">// 创建本地分支：</span></span><br><span class="line">$ git branch &lt;分支名&gt;</span><br><span class="line"><span class="comment">// 切换本地分支：</span></span><br><span class="line">$ git checkout &lt;分支名&gt;</span><br><span class="line"><span class="comment">// 创建+切换本地分支：</span></span><br><span class="line">$ git checkout -b &lt;name&gt;</span><br><span class="line"><span class="comment">// 合并某分支到当前分支：</span></span><br><span class="line">$ git merge &lt;要合并的分支&gt;</span><br><span class="line"><span class="comment">// 将本地分支推送到远程</span></span><br><span class="line">$ git push origin &lt;要推送的本地分支名&gt;</span><br><span class="line"><span class="comment">// 以远程分支为基础，建一个本地分支</span></span><br><span class="line">$ git checkout -b &lt;本地分支名&gt; origin/&lt;远程分支名&gt;</span><br><span class="line">// 删除本地分支：</span><br><span class="line">$ git branch -d &lt;本地分支名&gt;</span><br><span class="line">// 删除远程分支。将本地空分支推送到远程分支,相当于删除远程分支</span><br><span class="line">$ git push origin   :&lt;要删除的远程分支名&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="更新和提交代码"><a href="#更新和提交代码" class="headerlink" title="更新和提交代码"></a>更新和提交代码</h2><p>一个新的文件,或改动.刚开始只存在你的工作区。当你使用git add的时候，Git就会缓存这个改动并且跟踪。当你使用git commit的时候就会把你的改动提交到仓库里。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 缓存所有改动</span></span><br><span class="line">$ git add --all</span><br><span class="line"><span class="comment">// 缓存单个文件的改动</span></span><br><span class="line">$ git add &lt;该文件的文件名，包含路径&gt;</span><br><span class="line"><span class="comment">// 提交至本地仓库</span></span><br><span class="line">$ git commit -m &lt;提交备注&gt;</span><br><span class="line"><span class="comment">// 更新本地代码</span></span><br><span class="line">$ git pull origin &lt;分支名&gt;</span><br><span class="line"><span class="comment">// 将本地commit推送至远端</span></span><br><span class="line">$ git push orign &lt;分支名&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 撤销工作区某个文件的更改</span></span><br><span class="line">$ git checkout [file]</span><br><span class="line"><span class="comment">// 撤销工作区所有文件的更改</span></span><br><span class="line">$ git checkout .</span><br><span class="line"><span class="comment">// 重置暂存区的指定文件，与上一次commit保持一致。但更改并没有消失，而是更改打回工作区</span></span><br><span class="line">$ git reset [file]</span><br><span class="line"><span class="comment">// 重置暂存区与工作区，与上一次commit保持一致。</span></span><br><span class="line">$ git reset --hard &lt;当前分支名&gt;</span><br><span class="line"><span class="comment">// 重置当前分支的指针为指定commit，同时重置暂存区。但更改并没有消失，而是更改打回工作区</span></span><br><span class="line">$ git reset [commit]   </span><br><span class="line"><span class="comment">// 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致。</span></span><br><span class="line">$ git reset --hard [commit]</span><br><span class="line"><span class="comment">// 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span></span><br><span class="line">$ git reset --keep [commit]</span><br><span class="line"><span class="comment">// 暂时将未提交的变化存入stash，稍后再弹出</span></span><br><span class="line">$ git stash</span><br><span class="line">$ git stash pop</span><br></pre></td></tr></table></figure>
+<h2 id="git-review"><a href="#git-review" class="headerlink" title="git review"></a>git review</h2><p>代码评审使用gerrit系统，git中使用git review &lt;分支名&gt;(默认是master) 命令执行review操作。</p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><ul>
+<li>提交reivew之前pull远程代码，保证提交以前是最新代码，有冲突需要本地合并处理。</li>
+<li>一个单一的功能的变更放入一个commit中，提交一次reivew</li>
+</ul>
+<h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h2><ul>
+<li>review没有通过怎么办？</li>
+<li>先回到要修改的那个commit<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --soft  &lt;要修改的那个commit的id&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>继续修改你要改的文件。修改后add缓存文件，并执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend</span><br></pre></td></tr></table></figure></p>
+<p>将刚生产的变更归并到上一次变更里，继续执行git review</p>
+<ul>
+<li>已经做了多个提交commits怎么办？</li>
+<li>如果多个提交是相关联的，请合并这个提交为一个提交</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询最先提交的commit, 记住id.</span></span><br><span class="line">$ git log </span><br><span class="line"><span class="comment">// 进行变基操作</span></span><br><span class="line">$ git rebase -i  &lt;上一步查到的id&gt;</span><br><span class="line"><span class="comment">// 弹出的界面上罗列了最先提交的commit到现在的所有提交记录</span></span><br><span class="line"><span class="comment">//将每列开头的 'pick' 改成 's', 只保留第一列的 'pick'。</span></span><br><span class="line"><span class="comment">//保存修改后系统会自动把这些commits合并成一个commit.</span></span><br><span class="line"><span class="comment">// 如果遇到冲突需要手动解决。合并冲突后，继续变基， 直到所有commits都合并为止.</span></span><br><span class="line">$ git rebase --<span class="keyword">continue</span></span><br></pre></td></tr></table></figure>
+<p>如果review中提交了多个commits，其中一个commit没review过怎么办(包括以前某个commit中没有生成change id)？一次commit对应生成一个review, 前一个review没通过的话，后面的review 通过了也提交不了。 必须把前面一个review 弄通过，后面的review才能提交。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询未通过的review对应的commit id(gerrit里有记录)</span></span><br><span class="line"><span class="comment">// 回到这个commit的前一个节点，注意有个^</span></span><br><span class="line">$ 执行 git rebase -i  &lt;未通过的review对应的commit id&gt;^ </span><br><span class="line"><span class="comment">// 修改并缓存要提交的文件后</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"><span class="comment">// 返回head处</span></span><br><span class="line">$ git rebase --<span class="keyword">continue</span> </span><br><span class="line"><span class="comment">// 提交对老review的更新</span></span><br><span class="line">$ git review</span><br></pre></td></tr></table></figure>
+<h2 id="特别提示"><a href="#特别提示" class="headerlink" title="特别提示"></a>特别提示</h2><p>如果git review &lt;分支名&gt;后提示缺失commit_id，可能是前面rebase操作造成的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 现将rebase好的commit推回工作区</span></span><br><span class="line">$ git reset head^</span><br><span class="line"><span class="comment">// 再重新add和commit，产生新的commit_id</span></span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &lt;备注信息&gt;</span><br><span class="line">$ git review &lt;分支名&gt;</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        天下事有难易乎？为之，则难者亦易矣；不为，则易者亦难矣。
+        
+    </div>
+    
+    <footer>
+        <a href="http://olikui.github.io">
+            <img src="/img/avatar.jpg" alt="olki">
+            olki
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://olikui.github.io/2018/03/05/git常用命令/&title=《Git基本及常用命令》 — 小美工带你学习弯道超车的技巧！&pic=http://olikui.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://olikui.github.io/2018/03/05/git常用命令/&title=《Git基本及常用命令》 — 小美工带你学习弯道超车的技巧！&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://olikui.github.io/2018/03/05/git常用命令/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Git基本及常用命令》 — 小美工带你学习弯道超车的技巧！&url=http://olikui.github.io/2018/03/05/git常用命令/&via=http://olikui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://olikui.github.io/2018/03/05/git常用命令/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li> -->
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/05/第一篇/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">开天第一篇</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.v .vwrap .vcontrol .col.col-60{display: none !important;}
+.v .vwrap .vcontrol .col.col-40{ width: 100% !important;}
+#comments.vcomment{background: #fff;border-radius: 4px;box-shadow: 0 10px 30px rgba(0,0,0,0.2);}
+.power{display: none !important}
+</style>
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "VHUxCMzYML9k8vxEq2o9rg6g-gzGzoHsz",
+            appKey: "LpIXvWTdMm33XiDjUIbghrNK",
+            avatar: "monsterid",
+            placeholder: "请输入留言",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <!--<div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+         <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div> -->
+    <div class="bottom">
+        <p><span>olki &copy; 2018</span>
+            <!-- <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">Copyright © 2017 lk 豫ICP备17019505号</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://olikui.github.io/2018/03/05/git常用命令/&title=《Git基本及常用命令》 — 小美工带你学习弯道超车的技巧！&pic=http://olikui.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://olikui.github.io/2018/03/05/git常用命令/&title=《Git基本及常用命令》 — 小美工带你学习弯道超车的技巧！&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://olikui.github.io/2018/03/05/git常用命令/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Git基本及常用命令》 — 小美工带你学习弯道超车的技巧！&url=http://olikui.github.io/2018/03/05/git常用命令/&via=http://olikui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://olikui.github.io/2018/03/05/git常用命令/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li> -->
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACH0lEQVR42u3aQW6EQAxE0bn/pckBEppfdk8k3J9VFCHoNwvLhf354Ou6uX7fc3f/+snr/2y7ZMiQ8VrGtbzIPTXe+gz8bDJkyDiHsS6F63vuXk+Ozv9+OLMMGTJklEgpQIYMGTK+wUjDKgHIkCFDRifE8o9rpODyn29zFpchQ8YLGfyr+////ZX5hgwZMl7F6Hzu520ieUJrCCFDhozRDF7gUlhtVFA7jwwZMk5jdAJnJ6aS4lvsXmXIkDGCwYtdOhJIG0dCQjwZMmSMY5AA2Tl6Glxr0VeGDBlTGbzhIy/gCxnpuPQhJMuQIeMwRhpi02FkGkrjFC5DhoxxjP5SRUqtLVXEIwQZMmQMZXTWT9NxJh8kxAscMmTIGMfgjVoH0/nchn4UGTJkHMPgA4DWK0MM+oFkyJAxmlELnOmhO01kcWdEhgwZgxjpcJEUynR1oxN9Uf6WIUPGyxm1SJne+Y2mU4YMGScz0kPUxpD8Oa3JhgwZMsYx+FoDD6u8fayNH/4YD8iQIeMwRq2BS9vBDfFVhgwZBzM6bF640/c+rFzIkCFjHOMKrzSU8oO2mkgZMmSMZtQ2rNID7X1CsDMiQ4aMQYy0XJJYyxfIyD2oyMqQIeMARu37FV+P2DsKfcjiMmTIOJ7BSyEvxLx+biu4MmTIGM3YloxxSEZhWIYMGQcwSIjttIDpUIGzZciQcQIj7btay1uAV1tHkyFDxlDGD8pN2xnN9BZTAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '为什么要离开我！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
